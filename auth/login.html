@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/liquid-icon/lqd-essentials/lqd-essentials.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/theme.min.css" />
+    <link rel="stylesheet" href="../assets/css/utility.min.css" />
+    <link rel="stylesheet" href="../assets/css/demo/digital-hub/base.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/demo/digital-hub/digital-hub.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/output.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/TYPEKIT_ID.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Crestwood Capitals - Sign In</title>
+  </head>
+  <body
+    class="tw-min-h-screen tw-bg-gradient-to-br tw-from-purple-500 tw-to-indigo-600 tw-flex tw-items-center tw-justify-center tw-p-4"
+  >
+    <div
+      class="tw-bg-white tw-rounded-lg tw-shadow-2xl tw-p-8 tw-w-full tw-max-w-lg"
+    >
+      <!-- Logo and Header -->
+      <div class="tw-text-center tw-mb-8">
+        <a href="/index.html">
+          <img src="../images/logo-dark.png" alt="" class="tw-h-8 tw-mb-4"
+        /></a>
+        <h1 class="tw-text-2xl tw-font-semibold tw-text-gray-800">Sign In</h1>
+      </div>
+
+      <!-- Form -->
+      <form class="tw-space-y-4">
+        <!-- Email Field -->
+        <div>
+          <label
+            class="tw-block tw-text-sm tw-font-medium tw-text-gray-700 tw-mb-2"
+            >Email</label
+          >
+          <input
+            type="email"
+            placeholder="Enter email..."
+            class="tw-w-full tw-px-3 tw-py-2.5 tw-border tw-border-gray-300 tw-rounded-md tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-indigo-500 tw-focus:border-transparent tw-text-sm"
+          />
+        </div>
+
+        <!-- Password Field -->
+        <div>
+          <div class="tw-flex tw-justify-between tw-items-center tw-mb-2">
+            <label class="tw-block tw-text-sm tw-font-medium tw-text-gray-700"
+              >Password</label
+            >
+            <a
+              href="#"
+              class="tw-text-sm tw-text-indigo-600 tw-hover:text-indigo-500"
+              >Forget password?</a
+            >
+          </div>
+          <div class="tw-relative">
+            <input
+              type="password"
+              placeholder="Enter password..."
+              class="tw-w-full tw-px-3 tw-py-2.5 tw-border tw-border-gray-300 tw-rounded-md tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-indigo-500 tw-focus:border-transparent tw-text-sm tw-pr-10"
+            />
+            <button
+              type="button"
+              class="tw-absolute tw-right-3 tw-top-1/2 tw-transform tw--translate-y-1/2 tw-text-gray-400 tw-hover:text-gray-600"
+            >
+              <svg
+                class="tw-w-4 tw-h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Remember Password Checkbox -->
+        <div class="tw-flex tw-items-center tw-mt-4">
+          <input
+            type="checkbox"
+            id="remember"
+            class="tw-w-4 tw-h-4 tw-text-indigo-600 tw-bg-gray-100 tw-border-gray-300 tw-rounded tw-focus:ring-indigo-500 tw-focus:ring-2"
+          />
+          <label for="remember" class="tw-ml-2 tw-text-sm tw-text-gray-600"
+            >Remember password?</label
+          >
+        </div>
+
+        <!-- Sign In Button -->
+        <button
+          type="submit"
+          class="tw-w-full tw-bg-indigo-600 tw-text-white tw-py-2.5 tw-px-4 tw-rounded-md tw-font-medium tw-hover:bg-indigo-700 tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-indigo-500 tw-focus:ring-offset-2 tw-transition-colors tw-mt-6"
+        >
+          Sign In
+        </button>
+      </form>
+
+      <!-- Sign Up Link -->
+      <div class="tw-text-center tw-mt-6">
+        <p class="tw-text-sm tw-text-gray-600">
+          Don't have an account?
+          <a
+            href="/auth/signup.html"
+            class="tw-text-indigo-600 tw-hover:text-indigo-500 tw-font-medium"
+            >Sign Up</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Toggle password visibility
+      document
+        .querySelector('button[type="button"]')
+        .addEventListener("click", function () {
+          const input = this.previousElementSibling;
+          if (input.type === "password") {
+            input.type = "text";
+          } else {
+            input.type = "password";
+          }
+        });
+    </script>
+  </body>
+</html>
