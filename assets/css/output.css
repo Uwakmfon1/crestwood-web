@@ -1436,8 +1436,16 @@
     grid-template-columns: repeat(4, minmax(0, 1fr))
   }
 
+  .md\:tw-flex-row {
+    flex-direction: row
+  }
+
   .md\:tw-items-center {
     align-items: center
+  }
+
+  .md\:tw-gap-4 {
+    gap: 1rem
   }
 
   .md\:tw-px-8 {
